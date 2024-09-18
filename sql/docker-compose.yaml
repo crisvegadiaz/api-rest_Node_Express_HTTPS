@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:14.13-alpine3.20
+    container_name: postgres-prueba
+    environment:
+      POSTGRES_USER: cristian
+      POSTGRES_PASSWORD: 12345
+      POSTGRES_DB: prueba_db
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - 5432:5432
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data/pgdata
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
