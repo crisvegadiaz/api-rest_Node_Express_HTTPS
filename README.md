@@ -97,7 +97,6 @@ Este proyecto es una aplicación **Node.js** que utiliza una base de datos **Pos
 2. Configurar el archivo `.env` con las variables necesarias:
 
 ```bash
-cat node/.env 
 # Express
 JWT_SECRET = "tu_secreto_jwt"
 JWT_TIME = "La duración de validez del token formato = 4h"
